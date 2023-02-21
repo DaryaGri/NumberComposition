@@ -5,7 +5,7 @@ import com.example.numbercomposition.domain.repository.GameRepository
 
 class GenerateQuestionUseCase(private val repository: GameRepository) {
 
-    operator fun invoke(maxSumValue: Int): Question {
+    operator fun invoke(maxSumValue: Int): Question? {
         return repository.generateQuestion(maxSumValue, COUNT_OF_OPTIONS)
     }
 
